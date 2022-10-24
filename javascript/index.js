@@ -47,7 +47,41 @@
   });
 
 // Iteration 2 - using promises
-// ...
+obtainInstruction('steak', 0)
+  .then( (step2) => {
+    document.querySelector("#steak").innerHTML += `<li>${step2}</li>`
+    return new Promise((resolve, reject) => setTimeout(() => resolve(steak[1]), Math.floor(Math.random() * 1000)));
+  })
+  .then( (step3) => {
+    document.querySelector("#steak").innerHTML += `<li>${step3}</li>`
+    return new Promise((resolve, reject) => setTimeout(() => resolve(steak[2]), Math.floor(Math.random() * 1000)));
+  })
+  .then( (step4) => {
+    document.querySelector("#steak").innerHTML += `<li>${step4}</li>`
+    return new Promise((resolve, reject) => setTimeout(() => resolve(steak[3]), Math.floor(Math.random() * 1000)));
+  })
+  .then( (step5) => {
+    document.querySelector("#steak").innerHTML += `<li>${step5}</li>`
+    return new Promise((resolve, reject) => setTimeout(() => resolve(steak[4]), Math.floor(Math.random() * 1000)));
+  })
+  .then( (step6) => {
+    document.querySelector("#steak").innerHTML += `<li>${step6}</li>`
+    return new Promise((resolve, reject) => setTimeout(() => resolve(steak[5]), Math.floor(Math.random() * 1000)));
+  })
+  .then( (step7) => {
+    document.querySelector("#steak").innerHTML += `<li>${step7}</li>`
+    return new Promise((resolve, reject) => setTimeout(() => resolve(steak[6]), Math.floor(Math.random() * 1000)));
+  })
+  .then( (step8) => {
+    document.querySelector("#steak").innerHTML += `<li>${step8}</li>`
+    return new Promise((resolve, reject) => setTimeout(() => resolve(steak[7]), Math.floor(Math.random() * 1000)));
+  })
+  .then( (step9) => {
+    document.querySelector("#steak").innerHTML += `<li>${step9}</li>`
+    document.querySelector("#steak").innerHTML += `<li>Stake is ready!</li>`
+    document.querySelector("#steakImg").removeAttribute("hidden");
+    return new Promise((resolve, reject) => setTimeout(() => resolve(steak[8]), Math.floor(Math.random() * 1000)));
+  })
 
 // Iteration 3 using async/await
 // ...
